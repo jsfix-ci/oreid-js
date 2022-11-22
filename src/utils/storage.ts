@@ -16,7 +16,7 @@ import Helpers from './helpers'
 
 class CookieStorage implements IStorage {
   getItem(key: string): string {
-    return Cookie.get(key)
+    return JSON.parse(Cookie.get(key))
   }
 
   removeItem(key: string) {
